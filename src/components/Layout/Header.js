@@ -6,8 +6,8 @@ import headerIcon from '../../assets/header-icon.png';
 const Header = props => {
     return (
         <Fragment>
-            <Navbar bg="light" variant="light">
-                <Container>
+            <Navbar className="shadow-sm p-3 mb-0 bg-white rounded">
+                <Container fluid>
                     <Navbar.Brand>
                         <img
                             alt=""
