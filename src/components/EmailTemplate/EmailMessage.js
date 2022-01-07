@@ -1,13 +1,38 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
+import TextEditor from "../EmailEditing/TextEditor";
+import DOMPurify from 'dompurify';
 
 const EmailMessage = props => {
+    const defaultMessage = `<p>There are 30+ new jobs for you!</p>`;
+
+    const [messageHtml, setMessageHtml] = useState(defaultMessage);
+
+    const handleEditedMessage = (editedMessage) => {
+        setMessageHtml(editedMessage);
+        props.onCloseSection('quitEdit', props.index);
+    };
+
+    const handleCancelEdit = () => {
+        props.onCloseSection('quitEdit', props.index);
+    };
+
+    const createMarkup = (html) => {
+        return {
+            __html: DOMPurify.sanitize(html)
+        }
+    };
+
     return (
         <Fragment>
-
-            <p className="mb-1">Your Job Alert for <b>Software Engineer</b></p>
-            <p className="mb-0">30+ new jobs in San Fransisco match your preferences.</p>
-
-        </Fragment>
+            {props.editing &&
+                <TextEditor
+                    messageHtml={messageHtml}
+                    onDisplayEdited={handleEditedMessage}
+                    onCancelEdit={handleCancelEdit}
+                />}
+            {!props.editing &&
+                <div dangerouslySetInnerHTML={createMarkup(messageHtml)} />}
+        </Fragment >
     );
 }
 

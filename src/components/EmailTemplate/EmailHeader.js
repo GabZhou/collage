@@ -1,9 +1,6 @@
 import React, { Fragment, useState } from "react";
 import addLogo from '../../assets/add-logo.png';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
-import Button from 'react-bootstrap/Button';
+import { Row, Col, Image, Button } from 'react-bootstrap';
 
 const EmailHeader = props => {
     const logoInputRef = React.createRef();

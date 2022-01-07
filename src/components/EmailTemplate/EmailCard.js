@@ -1,7 +1,5 @@
 import { Fragment } from "react";
-import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Card, Row, Col } from 'react-bootstrap';
 import tiktok from '../../assets/tiktok.png';
 
 const EmailCard = props => {

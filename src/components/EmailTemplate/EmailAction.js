@@ -1,6 +1,5 @@
 import { Fragment } from "react";
-import Stack from 'react-bootstrap/Stack';
-import Button from 'react-bootstrap/Button';
+import { Stack, Button } from 'react-bootstrap';
 
 const EmailAction = props => {
     const style = {

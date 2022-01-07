@@ -1,0 +1,29 @@
+.btns-wrapper-edit {
+    display:flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+}
+
+.btn-edit {
+    border-radius: 15px;
+    background-color: #ffaa002a;  
+}
+
+.btn-edit:hover {
+    background-color: #ffaa002a;  
+}
+
+.btn-edit:active {
+    border: none;  
+    transform: none;
+}
+
+.btn-icon:hover {
+    filter: invert(70%) sepia(38%) saturate(3081%) hue-rotate(359deg) brightness(101%) contrast(105%);
+}
+
+.btn-icon:active {
+    filter: invert(70%) sepia(38%) saturate(3081%) hue-rotate(359deg) brightness(101%) contrast(105%);
+}

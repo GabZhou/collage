@@ -1,16 +1,15 @@
 import { Fragment } from "react";
 import Canvas from './Canvas'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const Template = props => {
+    console.log(props)
     return (
         <Fragment>
             <Container className="shadow-sm p-3 my-3 bg-white rounded">
                 <Row>
                     <Col>
-                        <Canvas jobs={props.jobs} />
+                        <Canvas props={props} />
                     </Col>
                 </Row>
             </Container>

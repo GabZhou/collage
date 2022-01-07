@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
+import { Container, Navbar } from 'react-bootstrap';
 import headerIcon from '../../assets/header-icon.png';
 
 const Header = props => {
